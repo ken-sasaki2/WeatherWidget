@@ -8,7 +8,7 @@
 import Foundation
 
 class WeatherViewModel: NSObject, ObservableObject {
-    @Published var hourlyWeather: [Hourly] = []
+    @Published var hourlyWeathers: [Hourly] = []
     @Published var error: Error = NSError()
     private let weatherRepository: WeatherRepositoryInterface
     
@@ -23,8 +23,9 @@ class WeatherViewModel: NSObject, ObservableObject {
     
     func fetchWeather() async {
         do {
-            let hourlyWeather = try await weatherRepository.fetchWeathers()
-            self.hourlyWeather = hourlyWeather
+            let response = try await weatherRepository.fetchWeathers()
+            self.hourlyWeathers = response.hourly
+            print("hourlyWeathers:", hourlyWeathers)
         }
         catch {
             self.error = error
