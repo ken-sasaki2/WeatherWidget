@@ -19,7 +19,8 @@ class WeatherWidgetTests: XCTestCase {
 
     func testWeatherDataStore() async throws {
         let dataStore = WeatherDataStore()
-        let response = try await dataStore.fetchWeathers(params: "")
+        let request = WeatherRequestModel(lat: 35.65146, lng: 139.63678) // 世田谷区経堂
+        let response = try await dataStore.fetchWeathers(requestModel: request)
         
         print("Success fetch weathers.")
         print("Response hourly:", response.hourly)
