@@ -44,6 +44,7 @@
 		D89EFAFE27A4E62D00D58E75 /* WeatherWidgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherWidgetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89EFB0227A4E62D00D58E75 /* WeatherWidgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWidgetUITests.swift; sourceTree = "<group>"; };
 		D89EFB0427A4E62D00D58E75 /* WeatherWidgetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWidgetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D89EFB1127A4E6F500D58E75 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 		D89EFADB27A4E62B00D58E75 = {
 			isa = PBXGroup;
 			children = (
+				D89EFB1127A4E6F500D58E75 /* README.md */,
 				D89EFAE627A4E62B00D58E75 /* WeatherWidget */,
 				D89EFAF727A4E62D00D58E75 /* WeatherWidgetTests */,
 				D89EFB0127A4E62D00D58E75 /* WeatherWidgetUITests */,
