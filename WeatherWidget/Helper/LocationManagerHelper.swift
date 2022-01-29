@@ -7,13 +7,19 @@
 
 import CoreLocation
 
-final class LocationManagerHelper: NSObject, CLLocationManagerDelegate {
+class LocationManagerHelper: NSObject, CLLocationManagerDelegate {
+    private var userRepository: UserRepositoryInterface
     var locationManager: CLLocationManager
     
-    override init() {
+    init(userRepository: UserRepositoryInterface) {
+        self.userRepository = userRepository
         self.locationManager = CLLocationManager()
         super.init()
         self.locationManager.delegate = self
+    }
+    
+    override convenience init() {
+        self.init(userRepository: RepositoryRocator.getUserRepository())
     }
     
     func callLocationManager() {
@@ -37,6 +43,10 @@ final class LocationManagerHelper: NSObject, CLLocationManagerDelegate {
         )
         
         print("緯度:", location.latitude, "経度:", location.longitude)
+        
+        userRepository.lat = location.latitude
+        userRepository.lng = location.longitude
+        
         locationManager.stopUpdatingLocation()
     }
 }
