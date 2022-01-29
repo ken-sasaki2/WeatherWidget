@@ -12,7 +12,9 @@ struct ContentView: View {
     
     var body: some View {
         Button {
-            print("Communicate open weather api.")
+            Task {
+                await weatherVM.fetchWeathers()
+            }
         } label: {
             Text("天気情報取得")
                 .font(.system(size: 18, weight: .medium, design: .default))
