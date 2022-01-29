@@ -33,6 +33,11 @@
 		D84F55EC27A544B8002C1C8B /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55EB27A544B8002C1C8B /* MediumWidgetView.swift */; };
 		D84F55EE27A546BE002C1C8B /* MediumWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55ED27A546BE002C1C8B /* MediumWidgetProvider.swift */; };
 		D84F55F127A546F2002C1C8B /* MediumWidgetEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55F027A546F2002C1C8B /* MediumWidgetEntryModel.swift */; };
+		D84F55F327A54B4F002C1C8B /* WeatherDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55B027A4FAD2002C1C8B /* WeatherDataStore.swift */; };
+		D84F55F527A54B5F002C1C8B /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55AC27A4FAA9002C1C8B /* WeatherRepository.swift */; };
+		D84F55F627A54B64002C1C8B /* WeatherRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55AE27A4FABC002C1C8B /* WeatherRepositoryInterface.swift */; };
+		D84F55F727A54B72002C1C8B /* WeatherResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55B227A4FFB1002C1C8B /* WeatherResponseModel.swift */; };
+		D84F55F827A54B75002C1C8B /* WeatherRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55B427A4FFC7002C1C8B /* WeatherRequestModel.swift */; };
 		D89EFAE827A4E62B00D58E75 /* WeatherWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFAE727A4E62B00D58E75 /* WeatherWidgetApp.swift */; };
 		D89EFAEA27A4E62B00D58E75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFAE927A4E62B00D58E75 /* ContentView.swift */; };
 		D89EFAEC27A4E62C00D58E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89EFAEB27A4E62C00D58E75 /* Assets.xcassets */; };
@@ -500,6 +505,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D84F55F627A54B64002C1C8B /* WeatherRepositoryInterface.swift in Sources */,
+				D84F55F727A54B72002C1C8B /* WeatherResponseModel.swift in Sources */,
+				D84F55F527A54B5F002C1C8B /* WeatherRepository.swift in Sources */,
+				D84F55F327A54B4F002C1C8B /* WeatherDataStore.swift in Sources */,
+				D84F55F827A54B75002C1C8B /* WeatherRequestModel.swift in Sources */,
 				D84F55F127A546F2002C1C8B /* MediumWidgetEntryModel.swift in Sources */,
 				D84F55EC27A544B8002C1C8B /* MediumWidgetView.swift in Sources */,
 				D84F55E827A54477002C1C8B /* WidgetBundle.swift in Sources */,
