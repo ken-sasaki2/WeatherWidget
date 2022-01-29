@@ -21,9 +21,17 @@ class WeatherViewModel: NSObject, ObservableObject {
         self.init(weatherRepository: RepositoryRocator.getWeatherRepository())
     }
     
-    func fetchWeather() async {
+    func createRequestModel() -> WeatherRequestModel {
+        let requestModel = WeatherRequestModel(
+            lat: 0.0, lng: 0.0
+        )
+        
+        return requestModel
+    }
+    
+    func fetchWeathers() async {
         do {
-            let response = try await weatherRepository.fetchWeathers()
+            let response = try await weatherRepository.fetchWeathers(requestModel: createRequestModel())
             self.hourlyWeathers = response.hourly
             print("hourlyWeathers:", hourlyWeathers)
         }

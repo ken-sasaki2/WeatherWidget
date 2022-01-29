@@ -10,9 +10,9 @@ import Foundation
 class WeatherRepository: WeatherRepositoryInterface {
     private let weatherDataStore = WeatherDataStore()
     
-    func fetchWeathers() async throws -> WeatherResponseModel {
+    func fetchWeathers(requestModel: WeatherRequestModel) async throws -> WeatherResponseModel {
         do {
-            let response = try await weatherDataStore.fetchWeathers(params: "")
+            let response = try await weatherDataStore.fetchWeathers(requestModel: requestModel)
             return response
         }
         catch {

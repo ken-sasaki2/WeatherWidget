@@ -8,5 +8,5 @@
 import Foundation
 
 protocol WeatherRepositoryInterface {
-    func fetchWeathers() async throws -> WeatherResponseModel
+    func fetchWeathers(requestModel: WeatherRequestModel) async throws -> WeatherResponseModel
 }
