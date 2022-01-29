@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+class WeatherRepository: WeatherRepositoryInterface {
+    private let weatherDataStore = WeatherDataStore()
+    
+    func fetchWeathers() async throws -> [Hourly]  {
+        do {
+            let response = try await weatherDataStore.fetchWeathers(params: "")
+            return response.hourly
+        }
+        catch {
+            throw error
+        }
+    }
+}

@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol WeatherRepositoryInterface {
+    func fetchWeathers() async throws -> [Hourly]
+}
