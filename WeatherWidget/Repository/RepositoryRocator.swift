@@ -12,4 +12,8 @@ class RepositoryRocator {
     static func getWeatherRepository() -> WeatherRepositoryInterface {
         WeatherRepository()
     }
+    
+    static func getUserRepository() -> UserRepositoryInterface {
+        UserRepository()
+    }
 }

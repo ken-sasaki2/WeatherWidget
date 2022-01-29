@@ -11,19 +11,22 @@ class WeatherViewModel: NSObject, ObservableObject {
     @Published var hourlyWeathers: [Hourly] = []
     @Published var error: Error = NSError()
     private let weatherRepository: WeatherRepositoryInterface
+    private let userRepository: UserRepositoryInterface
     
-    init(weatherRepository: WeatherRepositoryInterface) {
+    init(weatherRepository: WeatherRepositoryInterface, userRepository: UserRepositoryInterface) {
         self.weatherRepository = weatherRepository
+        self.userRepository = userRepository
         super.init()
     }
     
     override convenience init() {
-        self.init(weatherRepository: RepositoryRocator.getWeatherRepository())
+        self.init(weatherRepository: RepositoryRocator.getWeatherRepository(), userRepository: RepositoryRocator.getUserRepository())
     }
     
     func createRequestModel() -> WeatherRequestModel {
         let requestModel = WeatherRequestModel(
-            lat: 0.0, lng: 0.0
+            lat: userRepository.lat,
+            lng: userRepository.lng
         )
         
         return requestModel
