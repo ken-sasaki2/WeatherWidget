@@ -8,9 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let weatherVM = WeatherViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Button {
+            print("Communicate open weather api.")
+        } label: {
+            Text("天気情報取得")
+                .font(.system(size: 18, weight: .medium, design: .default))
+                .padding(.horizontal, 80)
+                .padding(.vertical, 12)
+                .foregroundColor(.white)
+                .background(.orange)
+                .cornerRadius(100)
+        }
     }
 }
 
