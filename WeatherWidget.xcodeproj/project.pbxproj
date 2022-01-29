@@ -14,6 +14,7 @@
 		D89EFAF927A4E62D00D58E75 /* WeatherWidgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFAF827A4E62D00D58E75 /* WeatherWidgetTests.swift */; };
 		D89EFB0327A4E62D00D58E75 /* WeatherWidgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFB0227A4E62D00D58E75 /* WeatherWidgetUITests.swift */; };
 		D89EFB0527A4E62D00D58E75 /* WeatherWidgetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFB0427A4E62D00D58E75 /* WeatherWidgetUITestsLaunchTests.swift */; };
+		D89EFB1427A4E76D00D58E75 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFB1327A4E76D00D58E75 /* Key.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		D89EFB0227A4E62D00D58E75 /* WeatherWidgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWidgetUITests.swift; sourceTree = "<group>"; };
 		D89EFB0427A4E62D00D58E75 /* WeatherWidgetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWidgetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D89EFB1127A4E6F500D58E75 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D89EFB1327A4E76D00D58E75 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				D89EFAE727A4E62B00D58E75 /* WeatherWidgetApp.swift */,
 				D89EFAE927A4E62B00D58E75 /* ContentView.swift */,
+				D89EFB1227A4E73C00D58E75 /* Secret */,
 				D89EFAEB27A4E62C00D58E75 /* Assets.xcassets */,
 				D89EFAED27A4E62C00D58E75 /* Preview Content */,
 			);
@@ -127,6 +130,14 @@
 				D89EFB0427A4E62D00D58E75 /* WeatherWidgetUITestsLaunchTests.swift */,
 			);
 			path = WeatherWidgetUITests;
+			sourceTree = "<group>";
+		};
+		D89EFB1227A4E73C00D58E75 /* Secret */ = {
+			isa = PBXGroup;
+			children = (
+				D89EFB1327A4E76D00D58E75 /* Key.swift */,
+			);
+			path = Secret;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				D89EFAEA27A4E62B00D58E75 /* ContentView.swift in Sources */,
 				D89EFAE827A4E62B00D58E75 /* WeatherWidgetApp.swift in Sources */,
+				D89EFB1427A4E76D00D58E75 /* Key.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
