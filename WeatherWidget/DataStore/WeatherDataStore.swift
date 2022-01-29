@@ -13,7 +13,7 @@ final class WeatherDataStore {
     private let decoder = JSONDecoder()
     
     func fetchWeathers(requestModel: WeatherRequestModel) async throws -> WeatherResponseModel {
-        let params = "lat=\(requestModel.lat)&lon=\(requestModel.lng)&exclude=current,minutely,daily,alerts&lang=ja&appid=\(API_KEY)"
+        let params = "lat=\(requestModel.lat)&lon=\(requestModel.lng)&units=metric&exclude=current,minutely,daily,alerts&lang=ja&appid=\(API_KEY)"
         let urlString = baseUrl + "?" + params
         guard let url = URL(string: urlString) else {
             throw NSError(domain: "Error fetch weathers.", code: -1)
