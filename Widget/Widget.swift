@@ -47,7 +47,7 @@ struct WidgetEntryView : View {
 }
 
 @main
-struct Widget: Widget {
+struct Widget: SwiftUI.Widget {
     let kind: String = "Widget"
 
     var body: some WidgetConfiguration {
@@ -56,6 +56,7 @@ struct Widget: Widget {
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
+        .supportedFamilies([.systemMedium])
     }
 }
 
