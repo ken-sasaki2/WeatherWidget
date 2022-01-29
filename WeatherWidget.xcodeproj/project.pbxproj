@@ -74,6 +74,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D84F55A427A4F4C8002C1C8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D84F55A527A4F4D2002C1C8B /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		D84F55A627A4F4DC002C1C8B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D84F55A727A4F4E5002C1C8B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D84F55A827A4F4EB002C1C8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D89EFAE927A4E62B00D58E75 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D84F55A927A4F52B002C1C8B /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Translator;
+			sourceTree = "<group>";
+		};
 		D89EFADB27A4E62B00D58E75 = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +142,12 @@
 			isa = PBXGroup;
 			children = (
 				D89EFAE727A4E62B00D58E75 /* WeatherWidgetApp.swift */,
-				D89EFAE927A4E62B00D58E75 /* ContentView.swift */,
+				D84F55A427A4F4C8002C1C8B /* Model */,
+				D84F55A827A4F4EB002C1C8B /* View */,
+				D84F55A727A4F4E5002C1C8B /* ViewModel */,
+				D84F55A927A4F52B002C1C8B /* Translator */,
+				D84F55A627A4F4DC002C1C8B /* Repository */,
+				D84F55A527A4F4D2002C1C8B /* DataStore */,
 				D89EFB1227A4E73C00D58E75 /* Secret */,
 				D89EFAEB27A4E62C00D58E75 /* Assets.xcassets */,
 				D89EFAED27A4E62C00D58E75 /* Preview Content */,
