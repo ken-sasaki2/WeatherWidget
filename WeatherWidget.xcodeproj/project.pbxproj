@@ -38,6 +38,7 @@
 		D84F55F627A54B64002C1C8B /* WeatherRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55AE27A4FABC002C1C8B /* WeatherRepositoryInterface.swift */; };
 		D84F55F727A54B72002C1C8B /* WeatherResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55B227A4FFB1002C1C8B /* WeatherResponseModel.swift */; };
 		D84F55F827A54B75002C1C8B /* WeatherRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55B427A4FFC7002C1C8B /* WeatherRequestModel.swift */; };
+		D84F55F927A54C8E002C1C8B /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFB1327A4E76D00D58E75 /* Key.swift */; };
 		D89EFAE827A4E62B00D58E75 /* WeatherWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFAE727A4E62B00D58E75 /* WeatherWidgetApp.swift */; };
 		D89EFAEA27A4E62B00D58E75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFAE927A4E62B00D58E75 /* ContentView.swift */; };
 		D89EFAEC27A4E62C00D58E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89EFAEB27A4E62C00D58E75 /* Assets.xcassets */; };
@@ -507,6 +508,7 @@
 			files = (
 				D84F55F627A54B64002C1C8B /* WeatherRepositoryInterface.swift in Sources */,
 				D84F55F727A54B72002C1C8B /* WeatherResponseModel.swift in Sources */,
+				D84F55F927A54C8E002C1C8B /* Key.swift in Sources */,
 				D84F55F527A54B5F002C1C8B /* WeatherRepository.swift in Sources */,
 				D84F55F327A54B4F002C1C8B /* WeatherDataStore.swift in Sources */,
 				D84F55F827A54B75002C1C8B /* WeatherRequestModel.swift in Sources */,
