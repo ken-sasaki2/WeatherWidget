@@ -9,7 +9,7 @@ import CoreLocation
 
 class LocationManagerHelper: NSObject, CLLocationManagerDelegate {
     private var userRepository: UserRepositoryInterface
-    var locationManager: CLLocationManager
+    private var locationManager: CLLocationManager
     
     init(userRepository: UserRepositoryInterface) {
         self.userRepository = userRepository
