@@ -234,6 +234,7 @@
 		D84F55D627A5420D002C1C8B /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				D84F55E727A54477002C1C8B /* WidgetBundle.swift */,
 				D84F55E527A543FE002C1C8B /* View */,
 				D84F55E427A543C4002C1C8B /* TimeLine */,
 				D84F55D927A5420F002C1C8B /* Assets.xcassets */,
@@ -254,19 +255,10 @@
 		D84F55E527A543FE002C1C8B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D84F55F227A54832002C1C8B /* Bundle */,
 				D84F55E927A5449D002C1C8B /* MediumWidgetMaster.swift */,
 				D84F55EB27A544B8002C1C8B /* MediumWidgetView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		D84F55F227A54832002C1C8B /* Bundle */ = {
-			isa = PBXGroup;
-			children = (
-				D84F55E727A54477002C1C8B /* WidgetBundle.swift */,
-			);
-			path = Bundle;
 			sourceTree = "<group>";
 		};
 		D89EFADB27A4E62B00D58E75 = {
