@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D832AB5627AD2D8200BD23E3 /* RepositoryRocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55BD27A515B5002C1C8B /* RepositoryRocator.swift */; };
+		D832AB5B27AE594200BD23E3 /* MockHourly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D832AB5927AE571A00BD23E3 /* MockHourly.swift */; };
+		D832AB5D27AE5A0100BD23E3 /* UserRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55C927A5378D002C1C8B /* UserRepositoryInterface.swift */; };
+		D832AB5E27AE5A1300BD23E3 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55C727A53776002C1C8B /* UserRepository.swift */; };
+		D832AB5F27AE5A1C00BD23E3 /* UserDefaultsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55CB27A537AB002C1C8B /* UserDefaultsDataStore.swift */; };
 		D84F55AB27A4FA95002C1C8B /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55AA27A4FA95002C1C8B /* WeatherViewModel.swift */; };
 		D84F55AD27A4FAA9002C1C8B /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55AC27A4FAA9002C1C8B /* WeatherRepository.swift */; };
 		D84F55AF27A4FABC002C1C8B /* WeatherRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55AE27A4FABC002C1C8B /* WeatherRepositoryInterface.swift */; };
@@ -88,6 +93,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D832AB5727AE552500BD23E3 /* WeatherWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherWidget.entitlements; sourceTree = "<group>"; };
+		D832AB5927AE571A00BD23E3 /* MockHourly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHourly.swift; sourceTree = "<group>"; };
 		D84F55AA27A4FA95002C1C8B /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		D84F55AC27A4FAA9002C1C8B /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
 		D84F55AE27A4FABC002C1C8B /* WeatherRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepositoryInterface.swift; sourceTree = "<group>"; };
@@ -160,6 +167,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D832AB5827AE56FF00BD23E3 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				D832AB5927AE571A00BD23E3 /* MockHourly.swift */,
+			);
+			path = mock;
+			sourceTree = "<group>";
+		};
 		D84F55A427A4F4C8002C1C8B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +261,7 @@
 		D84F55E427A543C4002C1C8B /* TimeLine */ = {
 			isa = PBXGroup;
 			children = (
+				D832AB5827AE56FF00BD23E3 /* mock */,
 				D84F55F027A546F2002C1C8B /* MediumWidgetEntryModel.swift */,
 				D84F55ED27A546BE002C1C8B /* MediumWidgetProvider.swift */,
 			);
@@ -288,6 +304,7 @@
 		D89EFAE627A4E62B00D58E75 /* WeatherWidget */ = {
 			isa = PBXGroup;
 			children = (
+				D832AB5727AE552500BD23E3 /* WeatherWidget.entitlements */,
 				D89EFAE727A4E62B00D58E75 /* WeatherWidgetApp.swift */,
 				D84F55BF27A52CCA002C1C8B /* AppDelegate.swift */,
 				D84F55A427A4F4C8002C1C8B /* Model */,
@@ -502,7 +519,12 @@
 				D84F55F727A54B72002C1C8B /* WeatherResponseModel.swift in Sources */,
 				D84F55F927A54C8E002C1C8B /* Key.swift in Sources */,
 				D84F55F527A54B5F002C1C8B /* WeatherRepository.swift in Sources */,
+				D832AB5F27AE5A1C00BD23E3 /* UserDefaultsDataStore.swift in Sources */,
+				D832AB5D27AE5A0100BD23E3 /* UserRepositoryInterface.swift in Sources */,
+				D832AB5B27AE594200BD23E3 /* MockHourly.swift in Sources */,
+				D832AB5627AD2D8200BD23E3 /* RepositoryRocator.swift in Sources */,
 				D84F55F327A54B4F002C1C8B /* WeatherDataStore.swift in Sources */,
+				D832AB5E27AE5A1300BD23E3 /* UserRepository.swift in Sources */,
 				D84F55F827A54B75002C1C8B /* WeatherRequestModel.swift in Sources */,
 				D84F55F127A546F2002C1C8B /* MediumWidgetEntryModel.swift in Sources */,
 				D84F55EC27A544B8002C1C8B /* MediumWidgetView.swift in Sources */,
@@ -752,6 +774,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WeatherWidget/WeatherWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherWidget/Preview Content\"";
@@ -783,6 +806,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WeatherWidget/WeatherWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherWidget/Preview Content\"";

@@ -8,6 +8,7 @@
 import Foundation
 
 final class UserDefaultsDataStore {
+    private let groupId = "group.com.ken.WeatherWidget"
     
     private enum DefaultsKey: String {
         case lat
@@ -15,7 +16,10 @@ final class UserDefaultsDataStore {
     }
     
     private var defaults: UserDefaults {
-        UserDefaults.standard
+        guard let defaults = UserDefaults(suiteName: groupId) else {
+            return UserDefaults.standard
+        }
+        return defaults
     }
     
     var lat: Double {
