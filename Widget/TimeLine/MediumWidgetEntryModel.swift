@@ -10,4 +10,5 @@ import SwiftUI
 
 struct MediumWidgetEntryModel: TimelineEntry {
     let date: Date
+    var hourlyWeathers: [Hourly]
 }
