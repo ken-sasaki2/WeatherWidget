@@ -17,7 +17,7 @@ class WeatherDataStoreTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testWeatherDataStore() async throws {
+    func testFetchWeathers() async throws {
         let dataStore = WeatherDataStore()
         let request = WeatherRequestModel(lat: 35.65146, lng: 139.63678) // 世田谷区経堂
         let response = try await dataStore.fetchWeathers(requestModel: request)
