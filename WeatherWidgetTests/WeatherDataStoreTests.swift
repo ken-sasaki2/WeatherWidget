@@ -19,7 +19,7 @@ class WeatherDataStoreTests: XCTestCase {
 
     func testFetchWeathers() async throws {
         let dataStore = WeatherDataStore()
-        let request = WeatherRequestModel(lat: 35.65146, lng: 139.63678) // 世田谷区経堂
+        let request = WeatherRequestModel(lat: TestHelper.lat, lng: TestHelper.lng)
         let response = try await dataStore.fetchWeathers(requestModel: request)
         
         print("Success fetch weathers.")
