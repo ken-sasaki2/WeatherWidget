@@ -8,6 +8,6 @@
 import Foundation
 
 class TestHelper {
-    static let lat = 35.65146
-    static let lng = 139.63678
+    static let lat = 35.646543998983674
+    static let lng = 139.62974883727196
 }
