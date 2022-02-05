@@ -14,14 +14,14 @@ struct MediumWidgetProvider: TimelineProvider {
     
     func placeholder(in context: Context) -> MediumWidgetEntryModel {
         MediumWidgetEntryModel(
-            date: Date(),
+            currentDate: Date(),
             hourlyWeathers: MockHourly.data
         )
     }
 
     func getSnapshot(in context: Context, completion: @escaping (MediumWidgetEntryModel) -> ()) {
         let entry = MediumWidgetEntryModel(
-            date: Date(),
+            currentDate: Date(),
             hourlyWeathers: MockHourly.data
         )
         completion(entry)
@@ -55,7 +55,7 @@ struct MediumWidgetProvider: TimelineProvider {
             // 未来5時間分Model作る
             for index in 0..<5 {
                 let entryModel = MediumWidgetEntryModel(
-                    date: justCurrentHourDate + Double((index * 3600)),
+                    currentDate: justCurrentHourDate + Double((index * 3600)),
                     hourlyWeathers: hourlyWeathers
                 )
                 await entries.append(model: entryModel)
