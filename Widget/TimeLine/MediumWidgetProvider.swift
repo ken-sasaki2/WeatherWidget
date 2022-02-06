@@ -11,18 +11,21 @@ import SwiftUI
 struct MediumWidgetProvider: TimelineProvider {
     private let weatherRepository = RepositoryRocator.getWeatherRepository()
     private let userRepository = RepositoryRocator.getUserRepository()
+    private let reverseGeocodeRepository = RepositoryRocator.getReverseGeocodeRepository()
     
     func placeholder(in context: Context) -> MediumWidgetEntryModel {
         MediumWidgetEntryModel(
             currentDate: Date(),
-            hourlyWeathers: MockHourly.data
+            hourlyWeathers: MockHourly.data,
+            currentLocation: "サンプル"
         )
     }
 
     func getSnapshot(in context: Context, completion: @escaping (MediumWidgetEntryModel) -> ()) {
         let entry = MediumWidgetEntryModel(
             currentDate: Date(),
-            hourlyWeathers: MockHourly.data
+            hourlyWeathers: MockHourly.data,
+            currentLocation: "サンプル"
         )
         completion(entry)
     }
@@ -48,6 +51,9 @@ struct MediumWidgetProvider: TimelineProvider {
         let justCurrentHourDate = Date(timeIntervalSince1970: justCurrentEpoch)
         
         Task {
+            let reverseGeocodeRequest = ReverseGeocodeRequestModel(lat: userRepository.lat, lng: userRepository.lng)
+            let reversGeocodeResponce = try await reverseGeocodeRepository.fetchLocationFromLatLng(requestModel: reverseGeocodeRequest)
+            
             let requestModel = WeatherRequestModel(lat: userRepository.lat, lng: userRepository.lng)
             let response = try await weatherRepository.fetchWeathers(requestModel: requestModel)
             let hourlyWeathers = response.hourly
@@ -56,7 +62,8 @@ struct MediumWidgetProvider: TimelineProvider {
             for index in 0..<5 {
                 let entryModel = MediumWidgetEntryModel(
                     currentDate: justCurrentHourDate + Double((index * 3600)),
-                    hourlyWeathers: hourlyWeathers
+                    hourlyWeathers: hourlyWeathers,
+                    currentLocation: reversGeocodeResponce.location
                 )
                 await entries.append(model: entryModel)
             }
