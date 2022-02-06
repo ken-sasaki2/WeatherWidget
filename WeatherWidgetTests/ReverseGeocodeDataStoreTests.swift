@@ -17,19 +17,14 @@ class ReverseGeocodeDataStoreTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testFetchLocationFromLatLng() throws {
+    func testFetchLocationFromLatLng() async throws {
         let dataStore = ReverseGeocodeDataStore()
-        let exp = expectation(description: "wait async.")
+        let requestModel = ReverseGeocodeRequestModel(lat: TestHelper.lat, lng: TestHelper.lng)
+        let responce = try await dataStore.fetchLocationFromLatLng(requestModel: requestModel)
         
-        dataStore.fetchLocationFromLatLng(lat: TestHelper.lat, lng: TestHelper.lng) { location in
-            print("Success fetch location from lat lng.")
-            print("location:", location)
-            XCTAssertEqual("世田谷区", location)
-            exp.fulfill()
-        } onFailure: {
-            XCTFail("Error fetch location from lat lng.")
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 10)
+        print("Success test fetch location from lat lng.")
+        print("responce:", responce)
+        
+        XCTAssertEqual("世田谷区", responce.location)
     }
 }
