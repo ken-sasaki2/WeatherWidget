@@ -54,9 +54,9 @@ struct MediumWidgetProvider: TimelineProvider {
             let reverseGeocodeRequest = ReverseGeocodeRequestModel(lat: userRepository.lat, lng: userRepository.lng)
             let reversGeocodeResponce = try await reverseGeocodeRepository.fetchLocationFromLatLng(requestModel: reverseGeocodeRequest)
             
-            let requestModel = WeatherRequestModel(lat: userRepository.lat, lng: userRepository.lng)
-            let response = try await weatherRepository.fetchWeathers(requestModel: requestModel)
-            let hourlyWeathers = response.hourly
+            let weatherRequest = WeatherRequestModel(lat: userRepository.lat, lng: userRepository.lng)
+            let weatherResponse = try await weatherRepository.fetchWeathers(requestModel: weatherRequest)
+            let hourlyWeathers = weatherResponse.hourly
             
             // 未来5時間分Model作る
             for index in 0..<5 {
