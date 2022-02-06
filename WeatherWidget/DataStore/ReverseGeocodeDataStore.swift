@@ -9,28 +9,23 @@ import CoreLocation
 
 class ReverseGeocodeDataStore {
     
-    func fetchLocationFromLatLng(lat: Double, lng: Double, complication: @escaping(ReverseGeocodeResponce) -> Void) {
-        var responce = ReverseGeocodeResponce()
+    func fetchLocationFromLatLng(lat: Double, lng: Double, onSuccess: @escaping(String) -> Void, onFailure: @escaping() -> Void) {
         let location = CLLocation(latitude: lat, longitude: lng)
-        
         CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
             if let error = error {
                 print("Error fetch location from lat lng.")
                 print("Error message:", error)
                 print("Error locarized message:", error.localizedDescription)
-                responce.error = error
-                complication(responce)
+                onFailure()
             }
             
             guard let locality = placemarks?.first?.locality else {
                 print("Error placemarks not found.")
-                responce.error = error
-                complication(responce)
+                onFailure()
                 return
             }
             
-            responce.location = locality
-            complication(responce)
+            onSuccess(locality)
         }
     }
 }
