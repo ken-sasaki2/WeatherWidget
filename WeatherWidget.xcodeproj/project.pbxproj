@@ -221,9 +221,9 @@
 		D84F55A527A4F4D2002C1C8B /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				D8637D3527AE8A9000813D50 /* ReverseGeocodeDataStore.swift */,
 				D84F55CB27A537AB002C1C8B /* UserDefaultsDataStore.swift */,
 				D84F55B027A4FAD2002C1C8B /* WeatherDataStore.swift */,
-				D8637D3527AE8A9000813D50 /* ReverseGeocodeDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
