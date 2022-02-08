@@ -25,14 +25,14 @@ struct MediumWidgetEntryModel: TimelineEntry {
         for index in 0..<8 {
             self.hourlyWeathers.append(hourlyWeathers[index])
             
-            let weather = self.hourlyWeathers[index].weather[index]
-            if let weatherName = getWeatherName(weather: weather) {
-                self.weatherIcons.append(weatherName)
+            let weather = hourlyWeathers[index].weather[0]
+            if let weatherIconName = getWeatherIconName(weather: weather) {
+                self.weatherIcons.append(weatherIconName)
             }
         }
     }
     
-    private func getWeatherName(weather: Weather) -> String? {
+    private func getWeatherIconName(weather: Weather) -> String? {
         var wetherName: String
         
         switch weather.main {
