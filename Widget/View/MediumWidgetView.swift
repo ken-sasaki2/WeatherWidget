@@ -16,19 +16,29 @@ struct MediumWidgetView: View {
         let backgroundColor = colorScheme == .dark ? Color.black : Color.white
         let hourlyWeathers = entry.hourlyWeathers
         let timePeriodTexts = entry.timePeriodTexts
+        let weatherIcons = entry.weatherIcons
         
         GeometryReader { geometry in
             let geometryWidth = geometry.size.width
             let geometryHeight = geometry.size.height
             let widthPerHour = (geometryWidth - 32) / 24 // 1時間あたりのwidth
             VStack {
-                HStack(alignment: .center, spacing: 0) {
-                    ForEach(timePeriodTexts, id: \.self) { timePeriodText in
-                        Text(timePeriodText)
-                            .foregroundColor(.black)
-                            .font(.system(size: 15, weight: .medium))
-                            .fixedSize(horizontal: true, vertical: true)
-                            .frame(width: widthPerHour, alignment: .center)
+                HStack(alignment: .top, spacing: 0) {
+                    ForEach(0..<24) { index in
+                        VStack(alignment: .center, spacing: 0) {
+                            Text(timePeriodTexts[index])
+                                .foregroundColor(.black)
+                                .font(.system(size: 14, weight: .medium))
+                                .fixedSize(horizontal: true, vertical: true)
+                                .frame(width: widthPerHour, alignment: .center)
+                            if isMultipleOfThree(hourlyWeather: hourlyWeathers[index]) {
+                                Image(weatherIcons[index])
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: widthPerHour, height: 27)
+                                    .fixedSize(horizontal: true, vertical: true)
+                            }
+                        }
                     }
                 }
                 .frame(width: geometryWidth - 32, height: geometryHeight - 32)
@@ -37,6 +47,20 @@ struct MediumWidgetView: View {
             .frame(width: geometryWidth, height: geometryHeight)
         }
         .background(backgroundColor)
+    }
+    
+    private func isMultipleOfThree(hourlyWeather: Hourly) -> Bool {
+        let hourDate = hourlyWeather.dt
+        let date = Date(timeIntervalSince1970: hourDate)
+        guard let dateInt = Int(DateFormatHelper.shared.formatToHH(date: date)) else {
+            return false
+        }
+        
+        if dateInt % 3 == 0 {
+            return true
+        } else {
+            return false
+        }
     }
 }
 
