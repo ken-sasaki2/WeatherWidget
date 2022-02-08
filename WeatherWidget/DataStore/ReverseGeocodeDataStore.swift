@@ -7,7 +7,7 @@
 
 import CoreLocation
 
-class ReverseGeocodeDataStore {
+final class ReverseGeocodeDataStore {
     
     func fetchLocationFromLatLng(requestModel: ReverseGeocodeRequestModel) async throws -> ReverseGeocodeResponceModel {
         let location = CLLocation(latitude: requestModel.lat, longitude: requestModel.lng)
