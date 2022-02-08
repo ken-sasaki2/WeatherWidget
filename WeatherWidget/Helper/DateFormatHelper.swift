@@ -17,7 +17,18 @@ class DateFormatHelper {
         return formatter
     }()
     
+    private let hourFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "Asia/Tokyo")
+        formatter.dateFormat = "HH"
+        return formatter
+    }()
+    
     func formatToHHmm(date: Date) -> String {
         return hourAndMinutesFormatter.string(from: date)
+    }
+    
+    func formatToHH(date: Date) -> String {
+        return hourFormatter.string(from: date)
     }
 }
