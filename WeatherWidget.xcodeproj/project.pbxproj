@@ -65,6 +65,10 @@
 		D8637D4F27AFB1C900813D50 /* ReverseGeocodeResponceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8637D4E27AFB1C900813D50 /* ReverseGeocodeResponceModel.swift */; };
 		D8637D5027AFB1C900813D50 /* ReverseGeocodeResponceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8637D4E27AFB1C900813D50 /* ReverseGeocodeResponceModel.swift */; };
 		D8637D5127AFB1C900813D50 /* ReverseGeocodeResponceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8637D4E27AFB1C900813D50 /* ReverseGeocodeResponceModel.swift */; };
+		D89880BE27B254BC00C43904 /* WeatherTypeTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89880BD27B254BC00C43904 /* WeatherTypeTranslatorTests.swift */; };
+		D89880C027B254C700C43904 /* WeatherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8637D3227AE88D600813D50 /* WeatherType.swift */; };
+		D89880C127B254CD00C43904 /* WeatherTypeTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8637D2E27AE87E000813D50 /* WeatherTypeTranslator.swift */; };
+		D89880C227B254CD00C43904 /* WeatherTypeTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8637D2E27AE87E000813D50 /* WeatherTypeTranslator.swift */; };
 		D89EFAE827A4E62B00D58E75 /* WeatherWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFAE727A4E62B00D58E75 /* WeatherWidgetApp.swift */; };
 		D89EFAEA27A4E62B00D58E75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFAE927A4E62B00D58E75 /* ContentView.swift */; };
 		D89EFAEC27A4E62C00D58E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89EFAEB27A4E62C00D58E75 /* Assets.xcassets */; };
@@ -149,6 +153,7 @@
 		D8637D4327AF8FAD00813D50 /* ReverseGeocodeRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocodeRepositoryInterface.swift; sourceTree = "<group>"; };
 		D8637D4A27AFAD4000813D50 /* ReverseGeocodeRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocodeRequestModel.swift; sourceTree = "<group>"; };
 		D8637D4E27AFB1C900813D50 /* ReverseGeocodeResponceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocodeResponceModel.swift; sourceTree = "<group>"; };
+		D89880BD27B254BC00C43904 /* WeatherTypeTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTypeTranslatorTests.swift; sourceTree = "<group>"; };
 		D89EFAE427A4E62B00D58E75 /* WeatherWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89EFAE727A4E62B00D58E75 /* WeatherWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWidgetApp.swift; sourceTree = "<group>"; };
 		D89EFAE927A4E62B00D58E75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -332,6 +337,23 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		D89880BB27B2548900C43904 /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+				D89880BD27B254BC00C43904 /* WeatherTypeTranslatorTests.swift */,
+			);
+			path = Translator;
+			sourceTree = "<group>";
+		};
+		D89880BC27B2549000C43904 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				D8637D3827AE91D500813D50 /* ReverseGeocodeDataStoreTests.swift */,
+				D89EFAF827A4E62D00D58E75 /* WeatherDataStoreTests.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
 		D89EFADB27A4E62B00D58E75 = {
 			isa = PBXGroup;
 			children = (
@@ -387,9 +409,9 @@
 		D89EFAF727A4E62D00D58E75 /* WeatherWidgetTests */ = {
 			isa = PBXGroup;
 			children = (
+				D89880BC27B2549000C43904 /* DataStore */,
 				D8637D3D27AE933300813D50 /* Helper */,
-				D8637D3827AE91D500813D50 /* ReverseGeocodeDataStoreTests.swift */,
-				D89EFAF827A4E62D00D58E75 /* WeatherDataStoreTests.swift */,
+				D89880BB27B2548900C43904 /* Translator */,
 			);
 			path = WeatherWidgetTests;
 			sourceTree = "<group>";
@@ -608,6 +630,7 @@
 				D89EFAEA27A4E62B00D58E75 /* ContentView.swift in Sources */,
 				D84F55C327A52E7B002C1C8B /* LocationManagerHelper.swift in Sources */,
 				D84F55CA27A5378D002C1C8B /* UserRepositoryInterface.swift in Sources */,
+				D89880C127B254CD00C43904 /* WeatherTypeTranslator.swift in Sources */,
 				D832AB6027AE664600BD23E3 /* MediumWidgetProvider.swift in Sources */,
 				D84F55CC27A537AB002C1C8B /* UserDefaultsDataStore.swift in Sources */,
 				D8637D4B27AFAD4000813D50 /* ReverseGeocodeRequestModel.swift in Sources */,
@@ -641,6 +664,9 @@
 				D8637D3A27AE92F500813D50 /* ReverseGeocodeDataStore.swift in Sources */,
 				D84F55BB27A50DDD002C1C8B /* WeatherRequestModel.swift in Sources */,
 				D89EFAF927A4E62D00D58E75 /* WeatherDataStoreTests.swift in Sources */,
+				D89880BE27B254BC00C43904 /* WeatherTypeTranslatorTests.swift in Sources */,
+				D89880C027B254C700C43904 /* WeatherType.swift in Sources */,
+				D89880C227B254CD00C43904 /* WeatherTypeTranslator.swift in Sources */,
 				D8637D5027AFB1C900813D50 /* ReverseGeocodeResponceModel.swift in Sources */,
 				D8637D4C27AFAD4000813D50 /* ReverseGeocodeRequestModel.swift in Sources */,
 			);
