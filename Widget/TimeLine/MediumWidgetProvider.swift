@@ -39,11 +39,6 @@ struct MediumWidgetProvider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<MediumWidgetEntryModel>) -> ()) {
-        // 緯度経度取得（UserDefaultsから取得）✔︎
-        // 更新時刻設定（1時間に一回）✔︎
-        // MediumWidgetEntryModelにresponseを追加（entryDateは必須で未来数時間分も用意してもいいかも）
-        // entriesに値を追加 ✔︎
-        
         let entries = Entries()
         let currentDate = Date()
         let currentEpoch = Int(currentDate.timeIntervalSince1970) // 現在時刻のepoch
