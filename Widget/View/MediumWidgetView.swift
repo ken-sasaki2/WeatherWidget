@@ -17,6 +17,7 @@ struct MediumWidgetView: View {
         let hourlyWeathers = entry.hourlyWeathers
         let timePeriodTexts = entry.timePeriodTexts
         let weatherIcons = entry.weatherIcons
+        let temperatureTexts = entry.temperatureTexts
         
         GeometryReader { geometry in
             let geometryWidth = geometry.size.width
@@ -24,7 +25,7 @@ struct MediumWidgetView: View {
             let widthPerHour = (geometryWidth - 32) / 24 // 1時間あたりのwidth
             VStack {
                 HStack(alignment: .top, spacing: 0) {
-                    ForEach(0..<24) { index in
+                    ForEach(0..<hourlyWeathers.count) { index in
                         VStack(alignment: .center, spacing: 0) {
                             Text(timePeriodTexts[index])
                                 .foregroundColor(.black)
@@ -37,6 +38,11 @@ struct MediumWidgetView: View {
                                     .scaledToFill()
                                     .frame(width: widthPerHour, height: 27)
                                     .fixedSize(horizontal: true, vertical: true)
+                                Text("\(temperatureTexts[index])℃")
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 12, weight: .regular))
+                                    .fixedSize(horizontal: true, vertical: true)
+                                    .frame(width: widthPerHour, alignment: .center)
                             }
                         }
                     }
