@@ -69,6 +69,9 @@
 		D89880C027B254C700C43904 /* WeatherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8637D3227AE88D600813D50 /* WeatherType.swift */; };
 		D89880C127B254CD00C43904 /* WeatherTypeTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8637D2E27AE87E000813D50 /* WeatherTypeTranslator.swift */; };
 		D89880C227B254CD00C43904 /* WeatherTypeTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8637D2E27AE87E000813D50 /* WeatherTypeTranslator.swift */; };
+		D89880C427B28E1100C43904 /* DateFormatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89880C327B28E1100C43904 /* DateFormatHelper.swift */; };
+		D89880C527B28E1100C43904 /* DateFormatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89880C327B28E1100C43904 /* DateFormatHelper.swift */; };
+		D89880C627B28E1100C43904 /* DateFormatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89880C327B28E1100C43904 /* DateFormatHelper.swift */; };
 		D89EFAE827A4E62B00D58E75 /* WeatherWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFAE727A4E62B00D58E75 /* WeatherWidgetApp.swift */; };
 		D89EFAEA27A4E62B00D58E75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFAE927A4E62B00D58E75 /* ContentView.swift */; };
 		D89EFAEC27A4E62C00D58E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89EFAEB27A4E62C00D58E75 /* Assets.xcassets */; };
@@ -154,6 +157,7 @@
 		D8637D4A27AFAD4000813D50 /* ReverseGeocodeRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocodeRequestModel.swift; sourceTree = "<group>"; };
 		D8637D4E27AFB1C900813D50 /* ReverseGeocodeResponceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocodeResponceModel.swift; sourceTree = "<group>"; };
 		D89880BD27B254BC00C43904 /* WeatherTypeTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTypeTranslatorTests.swift; sourceTree = "<group>"; };
+		D89880C327B28E1100C43904 /* DateFormatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatHelper.swift; sourceTree = "<group>"; };
 		D89EFAE427A4E62B00D58E75 /* WeatherWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89EFAE727A4E62B00D58E75 /* WeatherWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWidgetApp.swift; sourceTree = "<group>"; };
 		D89EFAE927A4E62B00D58E75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -274,6 +278,7 @@
 		D84F55C127A52E36002C1C8B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D89880C327B28E1100C43904 /* DateFormatHelper.swift */,
 				D84F55C227A52E7B002C1C8B /* LocationManagerHelper.swift */,
 			);
 			path = Helper;
@@ -602,6 +607,7 @@
 				D84F55F527A54B5F002C1C8B /* WeatherRepository.swift in Sources */,
 				D832AB5F27AE5A1C00BD23E3 /* UserDefaultsDataStore.swift in Sources */,
 				D832AB5D27AE5A0100BD23E3 /* UserRepositoryInterface.swift in Sources */,
+				D89880C627B28E1100C43904 /* DateFormatHelper.swift in Sources */,
 				D832AB5B27AE594200BD23E3 /* MockHourly.swift in Sources */,
 				D8637D3727AE8A9000813D50 /* ReverseGeocodeDataStore.swift in Sources */,
 				D832AB5627AD2D8200BD23E3 /* RepositoryRocator.swift in Sources */,
@@ -644,6 +650,7 @@
 				D84F55B527A4FFC7002C1C8B /* WeatherRequestModel.swift in Sources */,
 				D84F55AF27A4FABC002C1C8B /* WeatherRepositoryInterface.swift in Sources */,
 				D84F55BE27A515B5002C1C8B /* RepositoryRocator.swift in Sources */,
+				D89880C427B28E1100C43904 /* DateFormatHelper.swift in Sources */,
 				D832AB6127AE665400BD23E3 /* MockHourly.swift in Sources */,
 				D8637D3327AE88D600813D50 /* WeatherType.swift in Sources */,
 				D89EFB1427A4E76D00D58E75 /* Key.swift in Sources */,
@@ -662,6 +669,7 @@
 				D8637D3C27AE933000813D50 /* TestHelper.swift in Sources */,
 				D84F55BA27A50DDA002C1C8B /* WeatherResponseModel.swift in Sources */,
 				D8637D3A27AE92F500813D50 /* ReverseGeocodeDataStore.swift in Sources */,
+				D89880C527B28E1100C43904 /* DateFormatHelper.swift in Sources */,
 				D84F55BB27A50DDD002C1C8B /* WeatherRequestModel.swift in Sources */,
 				D89EFAF927A4E62D00D58E75 /* WeatherDataStoreTests.swift in Sources */,
 				D89880BE27B254BC00C43904 /* WeatherTypeTranslatorTests.swift in Sources */,
