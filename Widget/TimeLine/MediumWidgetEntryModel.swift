@@ -11,10 +11,10 @@ import SwiftUI
 struct MediumWidgetEntryModel: TimelineEntry {
     let date: Date
     var hourlyWeathers: [Hourly]
-    var currentLocation: String
+    var currentLocation: String?
     var weatherIcons: [String]
     
-    init(currentDate: Date, hourlyWeathers: [Hourly], currentLocation: String) {
+    init(currentDate: Date, hourlyWeathers: [Hourly], currentLocation: String?) {
         self.date = currentDate
         self.currentLocation = currentLocation
         
