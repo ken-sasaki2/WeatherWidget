@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DateFormatHelper {
+final class DateFormatHelper {
     static let shared = DateFormatHelper()
     
     private let hourAndMinutesFormatter: DateFormatter = {
