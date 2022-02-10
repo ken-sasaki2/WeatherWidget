@@ -24,58 +24,136 @@ struct MediumWidgetView: View {
             let geometryHeight = geometry.size.height
             let widthPerHour = (geometryWidth - 32) / 24 // 1時間あたりのwidth
             VStack {
-                ZStack {
-                    // Image("background_noon").resizable()
-                    if let location = entry.currentLocation {
-                        Text(location)
-                            .foregroundColor(.black)
-                            .font(.system(size: 14, weight: .regular))
-                            .offset(x: -widthPerHour)
-                            .frame(width: geometryWidth - 32, height: geometryHeight - 32, alignment: .topTrailing)
-                    }
-                    VStack {
-                        VStack {
-                            Path { path in
-                                path.move(to: CGPoint(x: 16, y: geometryHeight / 2))
-                                path.addLine(to: CGPoint(x: geometryWidth - 16, y: geometryHeight / 2))
-                                path.move(to: CGPoint(x: 16, y: (geometryHeight / 2) - 22.5))
-                                path.addLine(to: CGPoint(x: geometryWidth - 16, y: (geometryHeight / 2) - 22.5))
-                                path.move(to: CGPoint(x: 16, y: (geometryHeight / 2) - 45))
-                                path.addLine(to: CGPoint(x: geometryWidth - 16, y: (geometryHeight / 2) - 45))
+                Spacer().frame(height: 16)
+                VStack(spacing: 0) {
+                    // 赤
+                    HStack {
+                        Spacer()
+                        HStack(spacing: 0) {
+                            HStack(spacing: 0) {
+                                Text("24")
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 30, weight: .semibold))
+                                    .offset(x: 5)
+                                    .fixedSize(horizontal: true, vertical: true)
+                                Text("℃")
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 14, weight: .regular))
+                                    .offset(x: 5)
+                                    .fixedSize(horizontal: true, vertical: true)
+                                    .frame(height: geometryHeight / 6, alignment: .bottom)
                             }
-                            .stroke(.gray, lineWidth: 2)
-                            HStack(alignment: .top, spacing: 0) {
-                                ForEach(0..<hourlyWeathers.count) { index in
-                                    VStack(alignment: .center, spacing: 0) {
-                                        Text(timePeriodTexts[index])
+                            .frame(width: (geometryWidth - 32) / 2, height: geometryHeight / 6, alignment: .leading)
+                            if let location = entry.currentLocation {
+                                Text(location)
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 14, weight: .medium))
+                                    .offset(x: -5)
+                                    .frame(width: (geometryWidth - 32) / 2, height: geometryHeight / 6, alignment: .trailing)
+                            }
+                        }
+                        .frame(width: geometryWidth - 32, height: geometryHeight / 6)
+                        .background(Color.red)
+                        Spacer()
+                    }
+                    // 緑
+                    HStack {
+                        Spacer()
+                        HStack {
+                            
+                        }
+                        .frame(width: geometryWidth - 32, height: geometryHeight / 3)
+                        .background(Color.green)
+                        Spacer()
+                    }
+                    // 青
+                    HStack {
+                        Spacer()
+                        HStack(alignment: .top, spacing: 0) {
+                            ForEach(0..<hourlyWeathers.count) { index in
+                                VStack(alignment: .center, spacing: 0) {
+                                    Text(timePeriodTexts[index])
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 14, weight: .medium))
+                                        .fixedSize(horizontal: true, vertical: true)
+                                        .frame(width: widthPerHour, alignment: .center)
+                                    if isMultipleOfThree(hourlyWeather: hourlyWeathers[index]) {
+                                        Image(weatherIcons[index])
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(width: widthPerHour, height: 27)
+                                            .fixedSize(horizontal: true, vertical: true)
+                                        Text("\(temperatureTexts[index])℃")
                                             .foregroundColor(.black)
-                                            .font(.system(size: 14, weight: .medium))
+                                            .font(.system(size: 12, weight: .regular))
                                             .fixedSize(horizontal: true, vertical: true)
                                             .frame(width: widthPerHour, alignment: .center)
-                                        if isMultipleOfThree(hourlyWeather: hourlyWeathers[index]) {
-                                            Image(weatherIcons[index])
-                                                .resizable()
-                                                .scaledToFill()
-                                                .frame(width: widthPerHour, height: 27)
-                                                .fixedSize(horizontal: true, vertical: true)
-                                            Text("\(temperatureTexts[index])℃")
-                                                .foregroundColor(.black)
-                                                .font(.system(size: 12, weight: .regular))
-                                                .fixedSize(horizontal: true, vertical: true)
-                                                .frame(width: widthPerHour, alignment: .center)
-                                        }
                                     }
+                                    
                                 }
-                                .offset(y: (geometryHeight - 32) / 3.5)
                             }
-                            .frame(width: geometryWidth - 32, height: geometryHeight - 32)
-                            .clipped()
-                            Spacer().frame(height: 16)
                         }
+                        .frame(width: geometryWidth - 32, height: geometryHeight / 3)
+                        .background(Color.blue)
+                        Spacer()
                     }
+                    
+                    //                ZStack {
+                    //                    // Image("background_noon").resizable()
+//                                        if let location = entry.currentLocation {
+//                                            Text(location)
+//                                                .foregroundColor(.black)
+//                                                .font(.system(size: 14, weight: .regular))
+//                                                .offset(x: -widthPerHour)
+//                                                .frame(width: geometryWidth - 32, height: geometryHeight - 32, alignment: .topTrailing)
+//                                        }
+                    //                    VStack {
+                    //                        VStack {
+                    //                            Path { path in
+                    //                                path.move(to: CGPoint(x: 16, y: geometryHeight / 2))
+                    //                                path.addLine(to: CGPoint(x: geometryWidth - 16, y: geometryHeight / 2))
+                    //                                path.move(to: CGPoint(x: 16, y: (geometryHeight / 2) - 22.5))
+                    //                                path.addLine(to: CGPoint(x: geometryWidth - 16, y: (geometryHeight / 2) - 22.5))
+                    //                                path.move(to: CGPoint(x: 16, y: (geometryHeight / 2) - 45))
+                    //                                path.addLine(to: CGPoint(x: geometryWidth - 16, y: (geometryHeight / 2) - 45))
+                    //
+                    //                                path.move(to: CGPoint(x: 16, y: 20))
+                    //                                path.addLine(to: CGPoint(x: widthPerHour * 2, y: 10))
+                    //                            }
+                    //                            .stroke(.gray, lineWidth: 2)
+//                                                HStack(alignment: .top, spacing: 0) {
+//                                                    ForEach(0..<hourlyWeathers.count) { index in
+//                                                        VStack(alignment: .center, spacing: 0) {
+//                                                            Text(timePeriodTexts[index])
+//                                                                .foregroundColor(.black)
+//                                                                .font(.system(size: 14, weight: .medium))
+//                                                                .fixedSize(horizontal: true, vertical: true)
+//                                                                .frame(width: widthPerHour, alignment: .center)
+//                                                            if isMultipleOfThree(hourlyWeather: hourlyWeathers[index]) {
+//                                                                Image(weatherIcons[index])
+//                                                                    .resizable()
+//                                                                    .scaledToFill()
+//                                                                    .frame(width: widthPerHour, height: 27)
+//                                                                    .fixedSize(horizontal: true, vertical: true)
+//                                                                Text("\(temperatureTexts[index])℃")
+//                                                                    .foregroundColor(.black)
+//                                                                    .font(.system(size: 12, weight: .regular))
+//                                                                    .fixedSize(horizontal: true, vertical: true)
+//                                                                    .frame(width: widthPerHour, alignment: .center)
+//                                                            }
+//                                                        }
+//                                                    }
+//                                                    .offset(y: (geometryHeight - 32) / 3.5)
+//                                                }
+//                                                .frame(width: geometryWidth - 32, height: geometryHeight - 32)
+//                                                .clipped()
+                    //                            Spacer().frame(height: 16)
+                    //                        }
+                    //                    }
+                    //                }
+                    //                .frame(width: geometryWidth, height: geometryHeight)
+                    //                .edgesIgnoringSafeArea(.all)
                 }
-                .frame(width: geometryWidth, height: geometryHeight)
-                .edgesIgnoringSafeArea(.all)
             }
         }
         .background(backgroundColor)
