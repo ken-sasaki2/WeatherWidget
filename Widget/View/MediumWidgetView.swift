@@ -89,7 +89,6 @@ struct MediumWidgetView: View {
                                             .fixedSize(horizontal: true, vertical: true)
                                             .frame(width: widthPerHour, alignment: .center)
                                     }
-                                    
                                 }
                             }
                         }
@@ -97,62 +96,6 @@ struct MediumWidgetView: View {
                         .background(Color.blue)
                         Spacer()
                     }
-                    
-                    //                ZStack {
-                    //                    // Image("background_noon").resizable()
-//                                        if let location = entry.currentLocation {
-//                                            Text(location)
-//                                                .foregroundColor(.black)
-//                                                .font(.system(size: 14, weight: .regular))
-//                                                .offset(x: -widthPerHour)
-//                                                .frame(width: geometryWidth - 32, height: geometryHeight - 32, alignment: .topTrailing)
-//                                        }
-                    //                    VStack {
-                    //                        VStack {
-                    //                            Path { path in
-                    //                                path.move(to: CGPoint(x: 16, y: geometryHeight / 2))
-                    //                                path.addLine(to: CGPoint(x: geometryWidth - 16, y: geometryHeight / 2))
-                    //                                path.move(to: CGPoint(x: 16, y: (geometryHeight / 2) - 22.5))
-                    //                                path.addLine(to: CGPoint(x: geometryWidth - 16, y: (geometryHeight / 2) - 22.5))
-                    //                                path.move(to: CGPoint(x: 16, y: (geometryHeight / 2) - 45))
-                    //                                path.addLine(to: CGPoint(x: geometryWidth - 16, y: (geometryHeight / 2) - 45))
-                    //
-                    //                                path.move(to: CGPoint(x: 16, y: 20))
-                    //                                path.addLine(to: CGPoint(x: widthPerHour * 2, y: 10))
-                    //                            }
-                    //                            .stroke(.gray, lineWidth: 2)
-//                                                HStack(alignment: .top, spacing: 0) {
-//                                                    ForEach(0..<hourlyWeathers.count) { index in
-//                                                        VStack(alignment: .center, spacing: 0) {
-//                                                            Text(timePeriodTexts[index])
-//                                                                .foregroundColor(.black)
-//                                                                .font(.system(size: 14, weight: .medium))
-//                                                                .fixedSize(horizontal: true, vertical: true)
-//                                                                .frame(width: widthPerHour, alignment: .center)
-//                                                            if isMultipleOfThree(hourlyWeather: hourlyWeathers[index]) {
-//                                                                Image(weatherIcons[index])
-//                                                                    .resizable()
-//                                                                    .scaledToFill()
-//                                                                    .frame(width: widthPerHour, height: 27)
-//                                                                    .fixedSize(horizontal: true, vertical: true)
-//                                                                Text("\(temperatureTexts[index])℃")
-//                                                                    .foregroundColor(.black)
-//                                                                    .font(.system(size: 12, weight: .regular))
-//                                                                    .fixedSize(horizontal: true, vertical: true)
-//                                                                    .frame(width: widthPerHour, alignment: .center)
-//                                                            }
-//                                                        }
-//                                                    }
-//                                                    .offset(y: (geometryHeight - 32) / 3.5)
-//                                                }
-//                                                .frame(width: geometryWidth - 32, height: geometryHeight - 32)
-//                                                .clipped()
-                    //                            Spacer().frame(height: 16)
-                    //                        }
-                    //                    }
-                    //                }
-                    //                .frame(width: geometryWidth, height: geometryHeight)
-                    //                .edgesIgnoringSafeArea(.all)
                 }
             }
         }
@@ -173,6 +116,19 @@ struct MediumWidgetView: View {
         }
     }
 }
+
+//Path { path in
+//    path.move(to: CGPoint(x: 16, y: geometryHeight / 2))
+//    path.addLine(to: CGPoint(x: geometryWidth - 16, y: geometryHeight / 2))
+//    path.move(to: CGPoint(x: 16, y: (geometryHeight / 2) - 22.5))
+//    path.addLine(to: CGPoint(x: geometryWidth - 16, y: (geometryHeight / 2) - 22.5))
+//    path.move(to: CGPoint(x: 16, y: (geometryHeight / 2) - 45))
+//    path.addLine(to: CGPoint(x: geometryWidth - 16, y: (geometryHeight / 2) - 45))
+//
+//    path.move(to: CGPoint(x: 16, y: 20))
+//    path.addLine(to: CGPoint(x: widthPerHour * 2, y: 10))
+//}
+//.stroke(.gray, lineWidth: 2)
 
 struct MediumWidgetView_Previews: PreviewProvider {
     static var previews: some View {
