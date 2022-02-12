@@ -26,7 +26,7 @@ struct MediumWidgetView: View {
             VStack {
                 Spacer().frame(height: 16)
                 VStack(spacing: 0) {
-                    // 赤
+                    // 現在気温、地点名
                     HStack {
                         Spacer()
                         HStack(spacing: 0) {
@@ -56,7 +56,7 @@ struct MediumWidgetView: View {
                         .background(Color.red)
                         Spacer()
                     }
-                    // 緑
+                    // グラフ
                     HStack {
                         Spacer()
                         HStack {
@@ -79,7 +79,7 @@ struct MediumWidgetView: View {
                         .background(Color.green)
                         Spacer()
                     }
-                    // 青
+                    // 時刻、天気アイコン、気温
                     HStack {
                         Spacer()
                         HStack(alignment: .top, spacing: 0) {
@@ -129,19 +129,6 @@ struct MediumWidgetView: View {
         }
     }
 }
-
-//Path { path in
-//    path.move(to: CGPoint(x: 16, y: geometryHeight / 2))
-//    path.addLine(to: CGPoint(x: geometryWidth - 16, y: geometryHeight / 2))
-//    path.move(to: CGPoint(x: 16, y: (geometryHeight / 2) - 22.5))
-//    path.addLine(to: CGPoint(x: geometryWidth - 16, y: (geometryHeight / 2) - 22.5))
-//    path.move(to: CGPoint(x: 16, y: (geometryHeight / 2) - 45))
-//    path.addLine(to: CGPoint(x: geometryWidth - 16, y: (geometryHeight / 2) - 45))
-//
-//    path.move(to: CGPoint(x: 16, y: 20))
-//    path.addLine(to: CGPoint(x: widthPerHour * 2, y: 10))
-//}
-//.stroke(.gray, lineWidth: 2)
 
 struct MediumWidgetView_Previews: PreviewProvider {
     static var previews: some View {
