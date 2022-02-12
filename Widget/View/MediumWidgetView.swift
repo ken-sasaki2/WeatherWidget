@@ -53,7 +53,6 @@ struct MediumWidgetView: View {
                             }
                         }
                         .frame(width: geometryWidth - 32, height: geometryHeight / 6)
-                        .background(Color.red)
                         Spacer()
                     }
                     // グラフ
@@ -72,11 +71,10 @@ struct MediumWidgetView: View {
                                     path.move(to: CGPoint(x: 0, y: graphGeometryHeight - 2))
                                     path.addLine(to: CGPoint(x: graphGeometryWidth, y: graphGeometryHeight - 2))
                                 }
-                                .stroke(Color.gray, lineWidth: 3)
+                                .stroke(Color.gray, lineWidth: 1)
                             }
                         }
                         .frame(width: geometryWidth - 32, height: geometryHeight / 3)
-                        .background(Color.green)
                         Spacer()
                     }
                     // 時刻、天気アイコン、気温
@@ -106,7 +104,6 @@ struct MediumWidgetView: View {
                             }
                         }
                         .frame(width: geometryWidth - 32, height: geometryHeight / 3)
-                        .background(Color.blue)
                         Spacer()
                     }
                 }
