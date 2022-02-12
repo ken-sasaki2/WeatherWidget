@@ -60,7 +60,20 @@ struct MediumWidgetView: View {
                     HStack {
                         Spacer()
                         HStack {
-                            
+                            GeometryReader { graphGeometry in
+                                let graphGeometryWidth = graphGeometry.size.width
+                                let graphGeometryHeight = graphGeometry.size.height
+                                Path { path in
+                                    // 背景ライン
+                                    path.move(to: CGPoint(x: 0, y: 2))
+                                    path.addLine(to: CGPoint(x: graphGeometryWidth, y: 2))
+                                    path.move(to: CGPoint(x: 0, y: graphGeometryHeight / 2))
+                                    path.addLine(to: CGPoint(x: graphGeometryWidth, y: graphGeometryHeight / 2))
+                                    path.move(to: CGPoint(x: 0, y: graphGeometryHeight - 2))
+                                    path.addLine(to: CGPoint(x: graphGeometryWidth, y: graphGeometryHeight - 2))
+                                }
+                                .stroke(Color.gray, lineWidth: 3)
+                            }
                         }
                         .frame(width: geometryWidth - 32, height: geometryHeight / 3)
                         .background(Color.green)
