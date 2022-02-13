@@ -49,7 +49,7 @@ struct MediumWidgetView: View {
                                     .foregroundColor(.black)
                                     .font(.system(size: 14, weight: .medium))
                                     .offset(x: -5)
-                                    .frame(width: (geometryWidth - 32) / 2, height: geometryHeight / 6, alignment: .trailing)
+                                    .frame(width: (geometryWidth - 32) / 2, height: geometryHeight / 6, alignment: .bottomTrailing)
                             }
                         }
                         .frame(width: geometryWidth - 32, height: geometryHeight / 6)
