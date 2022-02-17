@@ -10,6 +10,7 @@
 		D81CED5427BE28D100132CFD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81CED5327BE28D100132CFD /* Colors.xcassets */; };
 		D81CED5727BE29A400132CFD /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81CED5627BE29A400132CFD /* ColorManager.swift */; };
 		D81CED5827BE29A400132CFD /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81CED5627BE29A400132CFD /* ColorManager.swift */; };
+		D81CED5927BE2CA600132CFD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81CED5327BE28D100132CFD /* Colors.xcassets */; };
 		D832AB5627AD2D8200BD23E3 /* RepositoryRocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55BD27A515B5002C1C8B /* RepositoryRocator.swift */; };
 		D832AB5B27AE594200BD23E3 /* MockHourly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D832AB5927AE571A00BD23E3 /* MockHourly.swift */; };
 		D832AB5D27AE5A0100BD23E3 /* UserRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55C927A5378D002C1C8B /* UserRepositoryInterface.swift */; };
@@ -581,6 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D84F55DA27A5420F002C1C8B /* Assets.xcassets in Resources */,
+				D81CED5927BE2CA600132CFD /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
