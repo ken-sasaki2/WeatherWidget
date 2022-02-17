@@ -15,6 +15,7 @@ struct MediumWidgetEntryModel: TimelineEntry {
     var weatherIcons: [String]
     var timePeriodTexts: [String]
     var temperatureTexts: [String]
+    var hourlyPressures: [Double]
     
     init(currentDate: Date, hourlyWeathers: [Hourly], currentLocation: String?) {
         self.date = currentDate
@@ -24,10 +25,12 @@ struct MediumWidgetEntryModel: TimelineEntry {
         self.weatherIcons = []
         self.timePeriodTexts = []
         self.temperatureTexts = []
+        self.hourlyPressures = []
         
         // 現在時刻から24時間分にhourlyWeathersを絞る
         for index in 0..<24 {
             self.hourlyWeathers.append(hourlyWeathers[index])
+            self.hourlyPressures.append(hourlyWeathers[index].pressure)
             
             let timePeriodText = getTimePeriodText(hourlyWeather: hourlyWeathers[index])
             self.timePeriodTexts.append(timePeriodText)
@@ -41,8 +44,6 @@ struct MediumWidgetEntryModel: TimelineEntry {
             self.temperatureTexts.append(temp)
         }
     }
-    
-    // ---------- Time Period ----------
     
     private func getTimePeriodText(hourlyWeather: Hourly) -> String {
         let date = Date(timeIntervalSince1970: hourlyWeather.dt)
@@ -71,8 +72,6 @@ struct MediumWidgetEntryModel: TimelineEntry {
         
         return timePeriodText
     }
-    
-    // ---------- Weather Icon ----------
     
     private func getWeatherIconName(weather: Weather) -> String? {
         var wetherName: String
