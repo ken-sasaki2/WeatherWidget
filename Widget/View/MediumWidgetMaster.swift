@@ -16,7 +16,7 @@ struct MediumWidgetMaster: Widget {
             MediumWidgetView(entry: entry)
         }
         .configurationDisplayName("天気予報ウィジェット")
-        .description("現在時刻から未来の天気、気温、気圧グラフを確認できます")
+        .description("現在時刻から24時間先の天気、気温、気圧グラフを確認できます")
         .supportedFamilies([.systemMedium])
     }
 }
