@@ -157,8 +157,8 @@ struct MediumWidgetView: View {
         hourlyPressures.enumerated().forEach { index, hourlyPressure  in
             let pressureGraphPointWidth = (width / 24) * CGFloat(index) // 時刻ごとのグラフ描画のx軸を作る
             
-            let heightPerHpa = height / 10 // 1hpaあたりのheight
-            let maxHpa = currentPressure + 5 // グラフ描画の上限の基準値
+            let heightPerHpa = height / 40 // 1hpaあたりのheight
+            let maxHpa = currentPressure + 20 // グラフ描画の上限の基準値
             let diffPressure = maxHpa - hourlyPressure // 各時間の上限基準値からの差分
             let pressureGraphPointHeight = diffPressure * heightPerHpa// 時刻毎の気圧グラフ描画のy軸
             let points = CGPoint(x: pressureGraphPointWidth, y: pressureGraphPointHeight)
