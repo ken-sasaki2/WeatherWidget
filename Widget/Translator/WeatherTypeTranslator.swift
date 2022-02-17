@@ -10,13 +10,13 @@ import Foundation
 class WeatherTypeTranslator {
     static func translate(type: WeatherType) -> String {
         switch type {
-        case .Clear:
+        case .clear:
             return "hare_noon"
-        case .Clouds:
+        case .clouds:
             return "cloudy"
-        case .Rain:
+        case .rain:
             return "rain"
-        case .Snow:
+        case .snow:
             return "snow"
         }
     }
