@@ -81,7 +81,7 @@ struct MediumWidgetView: View {
                                         path.move(to: CGPoint(x: graphBackLineStartPoint, y: graphGeometryHeight - 3))
                                         path.addLine(to: CGPoint(x: graphBackLineEndPoint, y: graphGeometryHeight - 3))
                                     }
-                                    .stroke(ColorManager.font, lineWidth: 1)
+                                    .stroke(ColorManager.graphBackground, lineWidth: 1)
                                     // 気圧グラフ
                                     ForEach(pressureGraphPoints) { pressureGraphPoint in
                                         Path { path in
