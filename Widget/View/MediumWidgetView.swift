@@ -8,6 +8,11 @@
 import WidgetKit
 import SwiftUI
 
+struct PressureGraphPoint: Identifiable {
+    var id = UUID()
+    var points: [CGPoint] = []
+}
+
 struct MediumWidgetView: View {
     @Environment(\.colorScheme) var colorScheme
     var entry: MediumWidgetProvider.Entry
@@ -18,6 +23,7 @@ struct MediumWidgetView: View {
         let timePeriodTexts = entry.timePeriodTexts
         let weatherIcons = entry.weatherIcons
         let temperatureTexts = entry.temperatureTexts
+        let hourlyPressures = entry.hourlyPressures
         
         GeometryReader { geometry in
             let geometryWidth = geometry.size.width
@@ -62,16 +68,33 @@ struct MediumWidgetView: View {
                             GeometryReader { graphGeometry in
                                 let graphGeometryWidth = graphGeometry.size.width
                                 let graphGeometryHeight = graphGeometry.size.height
-                                Path { path in
+                                let graphBackLineStartPoint = (widthPerHour * 0.5)
+                                let graphBackLineEndPoint = graphGeometryWidth - graphBackLineStartPoint
+                                let pressureGraphPoints = getPressureGraphPoints(hourlyPressures: hourlyPressures, width: graphGeometryWidth, height: graphGeometryHeight)
+                                ZStack {
                                     // 背景ライン
-                                    path.move(to: CGPoint(x: 0, y: 2))
-                                    path.addLine(to: CGPoint(x: graphGeometryWidth, y: 2))
-                                    path.move(to: CGPoint(x: 0, y: graphGeometryHeight / 2))
-                                    path.addLine(to: CGPoint(x: graphGeometryWidth, y: graphGeometryHeight / 2))
-                                    path.move(to: CGPoint(x: 0, y: graphGeometryHeight - 2))
-                                    path.addLine(to: CGPoint(x: graphGeometryWidth, y: graphGeometryHeight - 2))
+                                    Path { path in
+                                        path.move(to: CGPoint(x: graphBackLineStartPoint, y:3))
+                                        path.addLine(to: CGPoint(x: graphBackLineEndPoint, y: 3))
+                                        path.move(to: CGPoint(x: graphBackLineStartPoint, y: graphGeometryHeight / 2))
+                                        path.addLine(to: CGPoint(x: graphBackLineEndPoint, y: graphGeometryHeight / 2))
+                                        path.move(to: CGPoint(x: graphBackLineStartPoint, y: graphGeometryHeight - 3))
+                                        path.addLine(to: CGPoint(x: graphBackLineEndPoint, y: graphGeometryHeight - 3))
+                                    }
+                                    .stroke(Color.gray, lineWidth: 1)
+                                    // 気圧グラフ
+                                    ForEach(pressureGraphPoints) { pressureGraphPoint in
+                                        Path { path in
+                                            path.move(to: pressureGraphPoint.points[0])
+                                            for index in 1..<pressureGraphPoint.points.count {
+                                                path.addLine(to: pressureGraphPoint.points[index])
+                                            }
+                                        }
+                                        .stroke(Color.blue, lineWidth: 3)
+                                        .offset(x: widthPerHour * 0.5) // timePeriodTextsのx軸と合わせて描画]
+                                        .clipped()
+                                    }
                                 }
-                                .stroke(Color.gray, lineWidth: 1)
                             }
                         }
                         .frame(width: geometryWidth - 32, height: geometryHeight / 3)
@@ -124,6 +147,28 @@ struct MediumWidgetView: View {
         } else {
             return false
         }
+    }
+    
+    private func getPressureGraphPoints(hourlyPressures: [Double], width: CGFloat, height: CGFloat) -> [PressureGraphPoint] {
+        let currentPressure = hourlyPressures[0]
+        var pressureGraphPoints: [PressureGraphPoint] = []
+        var tempPressurePoint = PressureGraphPoint()
+        
+        hourlyPressures.enumerated().forEach { index, hourlyPressure  in
+            let pressureGraphPointWidth = (width / 24) * CGFloat(index) // 時刻ごとのグラフ描画のx軸を作る
+            
+            let heightPerHpa = height / 10 // 1hpaあたりのheight
+            let maxHpa = currentPressure + 5 // グラフ描画の上限の基準値
+            let diffPressure = maxHpa - hourlyPressure // 各時間の上限基準値からの差分
+            let pressureGraphPointHeight = diffPressure * heightPerHpa// 時刻毎の気圧グラフ描画のy軸
+            let points = CGPoint(x: pressureGraphPointWidth, y: pressureGraphPointHeight)
+            
+            tempPressurePoint.points.append(points)
+        }
+        
+        pressureGraphPoints.append(tempPressurePoint)
+        
+        return pressureGraphPoints
     }
 }
 
