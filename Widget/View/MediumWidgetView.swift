@@ -18,6 +18,7 @@ struct MediumWidgetView: View {
     var entry: MediumWidgetProvider.Entry
     
     var body: some View {
+        let currentDate = DateFormatHelper.shared.formatToHH(date: entry.date)
         let hourlyWeathers = entry.hourlyWeathers
         let timePeriodTexts = entry.timePeriodTexts
         let weatherIcons = entry.weatherIcons
@@ -41,9 +42,9 @@ struct MediumWidgetView: View {
                                     .font(.system(size: 30, weight: .semibold))
                                     .offset(x: 5)
                                     .fixedSize(horizontal: true, vertical: true)
-                                Text("℃")
+                                Text("℃" + "（\(currentDate)時" +  "現在）")
                                     .foregroundColor(ColorManager.font)
-                                    .font(.system(size: 14, weight: .regular))
+                                    .font(.system(size: 14, weight: .medium))
                                     .offset(x: 5)
                                     .fixedSize(horizontal: true, vertical: true)
                                     .frame(height: geometryHeight / 6, alignment: .bottom)
