@@ -16,4 +16,8 @@ class RepositoryRocator {
     static func getUserRepository() -> UserRepositoryInterface {
         UserRepository()
     }
+    
+    static func getReverseGeocodeRepository() -> ReverseGeocodeRepositoryInterface {
+        ReverseGeocodeRepository()
+    }
 }

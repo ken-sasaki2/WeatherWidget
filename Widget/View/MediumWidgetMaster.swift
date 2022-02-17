@@ -13,10 +13,10 @@ struct MediumWidgetMaster: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: MediumWidgetProvider()) { entry in
-            MediumWidgetView()
+            MediumWidgetView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("天気予報ウィジェット")
+        .description("現在時刻から未来の天気、気温、気圧グラフを確認できます")
         .supportedFamilies([.systemMedium])
     }
 }

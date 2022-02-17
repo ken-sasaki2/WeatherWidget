@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "cloudy.png",
       "idiom" : "universal"
     }
   ],
