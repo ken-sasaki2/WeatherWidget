@@ -37,14 +37,10 @@ class MediumWidgetEntryModelTests: XCTestCase {
             "･", "21", "･"
         ]
         
-        hourlyWeathers.enumerated().forEach { index, hourlyWeather in
+        hourlyWeathers.enumerated().forEach { index, input in
             let expect = expects[index]
-            let result = entryModel.getTimePeriodText(hourlyWeather: hourlyWeather)
+            let result = entryModel.getTimePeriodText(hourlyWeather: input)
             XCTAssertEqual(expect, result)
         }
-    }
-    
-    func testGetWeatherIconName() throws {
-        
     }
 }
