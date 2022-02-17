@@ -8,11 +8,6 @@
 import XCTest
 
 class MediumWidgetEntryModelTests: XCTestCase {
-    private let entryModel = MediumWidgetEntryModel(
-        currentDate: Date(),
-        hourlyWeathers: MockHourly.data,
-        currentLocation: "世田谷区"
-    )
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,7 +18,9 @@ class MediumWidgetEntryModelTests: XCTestCase {
     }
 
     func testGetTimePeriodText() throws {
+        let entryModel = MediumWidgetEntryModel(currentDate: Date(), hourlyWeathers: MockHourly.data, currentLocation: "世田谷区")
         let hourlyWeathers = entryModel.hourlyWeathers
+        
         let expects = [
             "･", "18", "･",
             "･", "21", "･",
