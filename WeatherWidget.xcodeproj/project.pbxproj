@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D81CED5427BE28D100132CFD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81CED5327BE28D100132CFD /* Colors.xcassets */; };
+		D81CED5727BE29A400132CFD /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81CED5627BE29A400132CFD /* ColorManager.swift */; };
+		D81CED5827BE29A400132CFD /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81CED5627BE29A400132CFD /* ColorManager.swift */; };
 		D832AB5627AD2D8200BD23E3 /* RepositoryRocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55BD27A515B5002C1C8B /* RepositoryRocator.swift */; };
 		D832AB5B27AE594200BD23E3 /* MockHourly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D832AB5927AE571A00BD23E3 /* MockHourly.swift */; };
 		D832AB5D27AE5A0100BD23E3 /* UserRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55C927A5378D002C1C8B /* UserRepositoryInterface.swift */; };
@@ -121,6 +124,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D81CED5327BE28D100132CFD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D81CED5627BE29A400132CFD /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		D832AB5727AE552500BD23E3 /* WeatherWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherWidget.entitlements; sourceTree = "<group>"; };
 		D832AB5927AE571A00BD23E3 /* MockHourly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHourly.swift; sourceTree = "<group>"; };
 		D84F55AA27A4FA95002C1C8B /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
@@ -207,6 +212,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D81CED5527BE298900132CFD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D81CED5627BE29A400132CFD /* ColorManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		D832AB5827AE56FF00BD23E3 /* mock */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,7 +410,9 @@
 				D84F55A627A4F4DC002C1C8B /* Repository */,
 				D84F55A527A4F4D2002C1C8B /* DataStore */,
 				D89EFB1227A4E73C00D58E75 /* Secret */,
+				D81CED5527BE298900132CFD /* Manager */,
 				D89EFAEB27A4E62C00D58E75 /* Assets.xcassets */,
+				D81CED5327BE28D100132CFD /* Colors.xcassets */,
 				D89EFAED27A4E62C00D58E75 /* Preview Content */,
 			);
 			path = WeatherWidget;
@@ -573,6 +588,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D81CED5427BE28D100132CFD /* Colors.xcassets in Resources */,
 				D89EFAEF27A4E62C00D58E75 /* Preview Assets.xcassets in Resources */,
 				D89EFAEC27A4E62C00D58E75 /* Assets.xcassets in Resources */,
 			);
@@ -610,6 +626,7 @@
 				D89880C627B28E1100C43904 /* DateFormatHelper.swift in Sources */,
 				D832AB5B27AE594200BD23E3 /* MockHourly.swift in Sources */,
 				D8637D3727AE8A9000813D50 /* ReverseGeocodeDataStore.swift in Sources */,
+				D81CED5827BE29A400132CFD /* ColorManager.swift in Sources */,
 				D832AB5627AD2D8200BD23E3 /* RepositoryRocator.swift in Sources */,
 				D84F55F327A54B4F002C1C8B /* WeatherDataStore.swift in Sources */,
 				D832AB5E27AE5A1300BD23E3 /* UserRepository.swift in Sources */,
@@ -636,6 +653,7 @@
 				D89EFAEA27A4E62B00D58E75 /* ContentView.swift in Sources */,
 				D84F55C327A52E7B002C1C8B /* LocationManagerHelper.swift in Sources */,
 				D84F55CA27A5378D002C1C8B /* UserRepositoryInterface.swift in Sources */,
+				D81CED5727BE29A400132CFD /* ColorManager.swift in Sources */,
 				D89880C127B254CD00C43904 /* WeatherTypeTranslator.swift in Sources */,
 				D832AB6027AE664600BD23E3 /* MediumWidgetProvider.swift in Sources */,
 				D84F55CC27A537AB002C1C8B /* UserDefaultsDataStore.swift in Sources */,
