@@ -9,12 +9,12 @@ import Foundation
 
 struct MockHourly {
     static let data: [Hourly] = [
-//        Hourly(
-//            dt: 1644048000,
-//            temp: 5.77,
-//            pressure: 1005.0,
-//            weather: [Weather(main: "Clouds")]
-//        ),
+        Hourly(
+            dt: 1644048000,
+            temp: 5.77,
+            pressure: 1005.0,
+            weather: [Weather(main: "Clouds")]
+        ),
         Hourly(
             dt: 1644051600, // 18:00
             temp: 5.49,
