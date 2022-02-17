@@ -18,7 +18,7 @@ class WeatherTypeTranslatorTests: XCTestCase {
     }
     
     func testWeatherTypeTranslator() throws {
-        let inputs: [WeatherType] = [.Clear, .Clouds, .Rain, .Snow]
+        let inputs: [WeatherType] = [.clear, .clouds, .rain, .snow]
         let expects = ["hare_noon", "cloudy", "rain", "snow"]
         
         for (index, input) in inputs.enumerated() {
