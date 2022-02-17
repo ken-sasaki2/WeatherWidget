@@ -42,7 +42,7 @@ struct MediumWidgetView: View {
                                     .font(.system(size: 30, weight: .semibold))
                                     .offset(x: 5)
                                     .fixedSize(horizontal: true, vertical: true)
-                                Text("℃" + "（\(currentDate)時" +  "現在）")
+                                Text("℃" + "（\(currentDate):00" +  "現在）")
                                     .foregroundColor(ColorManager.font)
                                     .font(.system(size: 14, weight: .medium))
                                     .offset(x: 5)
