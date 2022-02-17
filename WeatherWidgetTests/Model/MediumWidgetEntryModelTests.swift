@@ -8,7 +8,12 @@
 import XCTest
 
 class MediumWidgetEntryModelTests: XCTestCase {
-
+    private let entryModel = MediumWidgetEntryModel(
+        currentDate: Date(),
+        hourlyWeathers: MockHourly.data,
+        currentLocation: "世田谷区"
+    )
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -17,7 +22,29 @@ class MediumWidgetEntryModelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testGetTimePeriodText() throws {
+        let hourlyWeathers = entryModel.hourlyWeathers
+        let expects = [
+            "･", "18", "･",
+            "･", "21", "･",
+            "･", "0", "･",
+            "･", "3", "･",
+            "･", "6", "･",
+            "･", "9", "･",
+            "･", "12", "･",
+            "･", "15", "･",
+            "･", "18", "･",
+            "･", "21", "･"
+        ]
+        
+        hourlyWeathers.enumerated().forEach { index, hourlyWeather in
+            let expect = expects[index]
+            let result = entryModel.getTimePeriodText(hourlyWeather: hourlyWeather)
+            XCTAssertEqual(expect, result)
+        }
+    }
+    
+    func testGetWeatherIconName() throws {
         
     }
 }

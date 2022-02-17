@@ -45,7 +45,7 @@ struct MediumWidgetEntryModel: TimelineEntry {
         }
     }
     
-    private func getTimePeriodText(hourlyWeather: Hourly) -> String {
+    func getTimePeriodText(hourlyWeather: Hourly) -> String {
         let date = Date(timeIntervalSince1970: hourlyWeather.dt)
         let dateString = DateFormatHelper.shared.formatToHHmm(date: date)
         var timePeriodText: String

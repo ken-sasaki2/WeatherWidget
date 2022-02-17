@@ -14,6 +14,7 @@
 		D81CED5B27BE3F7E00132CFD /* DateFormatHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81CED5A27BE3F7E00132CFD /* DateFormatHelperTests.swift */; };
 		D81CED5D27BE43A500132CFD /* MediumWidgetEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55F027A546F2002C1C8B /* MediumWidgetEntryModel.swift */; };
 		D81CED5F27BE43C100132CFD /* MediumWidgetEntryModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81CED5E27BE43C100132CFD /* MediumWidgetEntryModelTests.swift */; };
+		D81CED6027BE5BC200132CFD /* MockHourly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D832AB5927AE571A00BD23E3 /* MockHourly.swift */; };
 		D832AB5627AD2D8200BD23E3 /* RepositoryRocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55BD27A515B5002C1C8B /* RepositoryRocator.swift */; };
 		D832AB5B27AE594200BD23E3 /* MockHourly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D832AB5927AE571A00BD23E3 /* MockHourly.swift */; };
 		D832AB5D27AE5A0100BD23E3 /* UserRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F55C927A5378D002C1C8B /* UserRepositoryInterface.swift */; };
@@ -712,6 +713,7 @@
 				D89880BE27B254BC00C43904 /* WeatherTypeTranslatorTests.swift in Sources */,
 				D89880C027B254C700C43904 /* WeatherType.swift in Sources */,
 				D89880C227B254CD00C43904 /* WeatherTypeTranslator.swift in Sources */,
+				D81CED6027BE5BC200132CFD /* MockHourly.swift in Sources */,
 				D8637D5027AFB1C900813D50 /* ReverseGeocodeResponceModel.swift in Sources */,
 				D8637D4C27AFAD4000813D50 /* ReverseGeocodeRequestModel.swift in Sources */,
 				D81CED5D27BE43A500132CFD /* MediumWidgetEntryModel.swift in Sources */,
