@@ -6,7 +6,7 @@
 言語：Swift  
 フレームワーク：SwiftUI  
 テスト：XCTest  
-API：Open Weather -One Call API-  
+API：Open Weather One Call API  
 
 ## ウィジェット画面
 #### Light Mode
