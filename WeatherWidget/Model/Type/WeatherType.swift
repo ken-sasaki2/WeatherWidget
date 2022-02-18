@@ -8,8 +8,8 @@
 import Foundation
 
 enum WeatherType: String {
-    case Clear
-    case Clouds
-    case Rain
-    case Snow
+    case clear
+    case clouds
+    case rain
+    case snow
 }

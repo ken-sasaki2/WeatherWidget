@@ -45,7 +45,7 @@ struct MediumWidgetEntryModel: TimelineEntry {
         }
     }
     
-    private func getTimePeriodText(hourlyWeather: Hourly) -> String {
+    func getTimePeriodText(hourlyWeather: Hourly) -> String {
         let date = Date(timeIntervalSince1970: hourlyWeather.dt)
         let dateString = DateFormatHelper.shared.formatToHHmm(date: date)
         var timePeriodText: String
@@ -78,13 +78,13 @@ struct MediumWidgetEntryModel: TimelineEntry {
         
         switch weather.main {
         case "Clear":
-            wetherName = WeatherTypeTranslator.translate(type: .Clear)
+            wetherName = WeatherTypeTranslator.translate(type: .clear)
         case "Clouds":
-            wetherName = WeatherTypeTranslator.translate(type: .Clouds)
+            wetherName = WeatherTypeTranslator.translate(type: .clouds)
         case "Rain":
-            wetherName = WeatherTypeTranslator.translate(type: .Rain)
+            wetherName = WeatherTypeTranslator.translate(type: .rain)
         case "Snow":
-            wetherName = WeatherTypeTranslator.translate(type: .Snow)
+            wetherName = WeatherTypeTranslator.translate(type: .snow)
         default:
             return nil
         }
