@@ -1,9 +1,9 @@
 ## アプリの概要
-ウィジェットで天気予報アプリを開発。  
+`WidgetKit`で天気予報アプリを開発。  
 現在時刻から24時間先までの気温、天気、気圧グラフが確認できる。
 
 ## 開発内容
-言語：Swift
+言語：Swift  
 フレームワーク：SwiftUI  
 テスト：XCTest  
 API：Open Weather -One Call API-  
