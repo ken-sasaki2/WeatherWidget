@@ -74,11 +74,11 @@ struct MediumWidgetView: View {
                                 ZStack {
                                     // 背景ライン
                                     Path { path in
-                                        path.move(to: CGPoint(x: graphBackLineStartPoint, y:3))
+                                        path.move(to: CGPoint(x: graphBackLineStartPoint + widthPerHour, y:3))
                                         path.addLine(to: CGPoint(x: graphBackLineEndPoint, y: 3))
                                         path.move(to: CGPoint(x: graphBackLineStartPoint, y: graphGeometryHeight / 2))
                                         path.addLine(to: CGPoint(x: graphBackLineEndPoint, y: graphGeometryHeight / 2))
-                                        path.move(to: CGPoint(x: graphBackLineStartPoint, y: graphGeometryHeight - 3))
+                                        path.move(to: CGPoint(x: graphBackLineStartPoint + widthPerHour, y: graphGeometryHeight - 3))
                                         path.addLine(to: CGPoint(x: graphBackLineEndPoint, y: graphGeometryHeight - 3))
                                     }
                                     .stroke(ColorManager.graphBackground, lineWidth: 1)
@@ -94,6 +94,24 @@ struct MediumWidgetView: View {
                                         .offset(x: widthPerHour * 0.5) // timePeriodTextsのx軸と合わせて描画]
                                         .clipped()
                                     }
+                                    Text(String(format: "%0.0f", hourlyPressures[0] + 15))
+                                        .font(.system(size: 6, weight: .regular))
+                                        .foregroundColor(ColorManager.font)
+                                        .frame(width: graphBackLineEndPoint, height: graphGeometryHeight, alignment: .topLeading)
+                                    Text(String(format: "%0.0f", hourlyPressures[0]))
+                                        .font(.system(size: 6, weight: .regular))
+                                        .foregroundColor(ColorManager.font)
+                                        .offset(y: 5)
+                                        .frame(width: graphBackLineEndPoint, height: graphGeometryHeight, alignment: .leading)
+                                    Text(String(format: "%0.0f", hourlyPressures[0] - 15))
+                                        .font(.system(size: 6, weight: .regular))
+                                        .foregroundColor(ColorManager.font)
+                                        .frame(width: graphBackLineEndPoint, height: graphGeometryHeight, alignment: .bottomLeading)
+                                    Text("hpa")
+                                        .font(.system(size: 8, weight: .regular))
+                                        .foregroundColor(ColorManager.font)
+                                        .offset(x: -4, y: -4)
+                                        .frame(width: graphBackLineEndPoint, height: graphGeometryHeight, alignment: .bottomTrailing)
                                 }
                             }
                         }
