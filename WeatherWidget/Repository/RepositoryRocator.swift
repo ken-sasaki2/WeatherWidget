@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RepositoryRocator {
+final class RepositoryRocator {
     
     static func getWeatherRepository() -> WeatherRepositoryInterface {
         WeatherRepository()
