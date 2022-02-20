@@ -73,7 +73,7 @@ struct MediumWidgetEntryModel: TimelineEntry {
         return timePeriodText
     }
     
-    private func getWeatherIconName(weather: Weather) -> String? {
+    func getWeatherIconName(weather: Weather) -> String? {
         var wetherName: String
         
         switch weather.main {

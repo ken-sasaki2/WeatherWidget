@@ -7,7 +7,7 @@
 
 import CoreLocation
 
-class LocationManagerHelper: NSObject, CLLocationManagerDelegate {
+final class LocationManagerHelper: NSObject, CLLocationManagerDelegate {
     private var userRepository: UserRepositoryInterface
     private var locationManager: CLLocationManager
     

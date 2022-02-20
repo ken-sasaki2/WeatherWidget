@@ -7,7 +7,7 @@
 
 import Foundation
 
-class WeatherTypeTranslator {
+final class WeatherTypeTranslator {
     static func translate(type: WeatherType) -> String {
         switch type {
         case .clear:
