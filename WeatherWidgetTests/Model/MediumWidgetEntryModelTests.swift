@@ -40,16 +40,11 @@ class MediumWidgetEntryModelTests: XCTestCase {
         let hourlyWeathers = entryModel.hourlyWeathers
         
         let expects = [
-            "･", "18", "･",
-            "･", "21", "･",
-            "･", "0", "･",
-            "･", "3", "･",
-            "･", "6", "･",
-            "･", "9", "･",
-            "･", "12", "･",
-            "･", "15", "･",
-            "･", "18", "･",
-            "･", "21", "･"
+            "･", "18", "･", "･", "21", "･",
+            "･", "0", "･", "･", "3", "･",
+            "･", "6", "･", "･", "9", "･",
+            "･", "12", "･", "･", "15", "･",
+            "･", "18", "･", "･", "21", "･"
         ]
         
         hourlyWeathers.enumerated().forEach { index, input in
