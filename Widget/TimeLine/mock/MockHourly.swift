@@ -48,13 +48,13 @@ struct MockHourly {
         Hourly(
             dt: 1644069600,
             temp: 2.82,
-            pressure: 1017,
+            pressure: 1016,
             weather: [Weather(main: "Snow")]
         ),
         Hourly(
             dt: 1644073200, // 00:00
             temp: 2.61,
-            pressure: 1019,
+            pressure: 1018,
             weather: [Weather(main: "Rain")]
         ),
         Hourly(
@@ -66,7 +66,7 @@ struct MockHourly {
         Hourly(
             dt: 1644080400,
             temp: 2.35,
-            pressure: 1019,
+            pressure: 1018,
             weather: [Weather(main: "Rain")]
         ),
         Hourly(
