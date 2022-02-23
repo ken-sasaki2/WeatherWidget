@@ -9,11 +9,7 @@
 API：Open Weather One Call API  
 
 ## ウィジェット画面
-#### Light Mode
-![Light Mode](https://user-images.githubusercontent.com/61372276/154653113-28eb1370-3dc5-475c-b8f2-6d9b3d12f152.png)
-
-#### Dark Mode
-![Dark Mode](https://user-images.githubusercontent.com/61372276/154653123-a4b01737-fad5-41f1-b2a2-dc328faa0c3a.png)
+![スクリーンショット 2022-02-22 17.49.45.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/643372/cc486bec-716f-0203-9763-634b2854c6a1.png)
 
 ## 開発者
 開発者への連絡は[Twitter DM](https://twitter.com/ken_sasaki2)までお願いします🙇‍♂️  
